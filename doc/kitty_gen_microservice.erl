@@ -3,7 +3,7 @@
 %% http://learnyousomeerlang.com/static/erlang/kitty_gen_server.erl
 
 -module(kitty_gen_microservice).
--behaviour(gen_server).
+-behaviour(gen_microservice).
 
 -export([start_link/0, order_cat/4, return_cat/2, close_shop/1]).
 -export([init/1, monolithic_call/3, modern_async/2, handle_info/2,
