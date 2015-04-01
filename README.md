@@ -1,13 +1,14 @@
 # Erlang gen_microservice #
 
-This library makes easy to implement microservices with Erlang.
+This library solves the problem of implementing microservices with
+Erlang.
 
-Your code just need to add the behaviour `gen_microservice` to your
+Your code just needs to add the behaviour `gen_microservice` to your
 module, implement a couple of callbacks, and you will have a
 **microservice** ready to use in your stealth startup.
 
 We bring you the magic that let WhatsApp scale to millions of users
-and dollars, here, for free.
+and dollars, _here_, for free.
 
 ## Features ##
 
