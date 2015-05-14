@@ -13,19 +13,19 @@
 
 %%% Client API
 start_link() ->
-    gen_server:start_link(?MODULE, [], []).
+    gen_microservice:start_link(?MODULE, [], []).
 
 %% Synchronous call
 order_cat(Pid, Name, Color, Description) ->
-    gen_server:call(Pid, {order, Name, Color, Description}).
+    gen_microservice:call(Pid, {order, Name, Color, Description}).
 
 %% This call is asynchronous
 return_cat(Pid, Cat = #cat{}) ->
-    gen_server:cast(Pid, {return, Cat}).
+    gen_microservice:cast(Pid, {return, Cat}).
 
 %% Synchronous call
 close_shop(Pid) ->
-    gen_server:call(Pid, terminate).
+    gen_microservice:call(Pid, terminate).
 
 %%% Server functions
 init([]) -> {ok, []}. %% no treatment of info here!
